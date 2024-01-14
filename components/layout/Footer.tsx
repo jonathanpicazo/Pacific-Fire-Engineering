@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer: React.FC = () => (
   <footer>
-    <p>Pacific Footer</p>
+    <span className="hidden">footer</span>
   </footer>
 );
 

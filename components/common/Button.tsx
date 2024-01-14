@@ -18,7 +18,7 @@ const Button: React.FC<Props> = ({
   <button
     type={isSubmit ? 'submit' : 'button'}
     className={clsx(
-      !isUnstyled && 'bg-primary rounded-[5px] p-4 text-white',
+      !isUnstyled && 'rounded-md bg-primary p-4 text-white',
       className
     )}
     {...props}
