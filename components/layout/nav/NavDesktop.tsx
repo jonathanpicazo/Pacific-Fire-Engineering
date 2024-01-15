@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import clsx from 'clsx';
-import { Button } from '@/components/common';
+import { buttonClassNames } from '@/components/common/Button';
 import { navItems, NavItemType } from '@/utils/const';
-import Logo from '@/public/logo-desktop.png';
+import Logo from '@/public/logo.png';
 
 type NavItemProps = {
   item: NavItemType;
@@ -41,7 +41,9 @@ const NavDesktop: React.FC = () => (
       ))}
     </div>
     <div>
-      <Button>Contact Us</Button>
+      <Link className={clsx(buttonClassNames)} href="/contact">
+        <span>Contact Us</span>
+      </Link>
     </div>
   </div>
 );

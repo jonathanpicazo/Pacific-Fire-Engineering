@@ -8,8 +8,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MdMenu, MdClose } from 'react-icons/md';
 import clsx from 'clsx';
 import { useClickAway } from 'react-use';
-import { Button } from '@/components/common';
+import { Button } from '@/components/common/';
 import { navItems, NavItemType } from '@/utils/const';
+import Logo from '@/public/logo.png';
 
 type NavImageProps = {
   setShowDrawer: (show: boolean) => void;
@@ -24,11 +25,11 @@ const NavImage: React.FC<NavImageProps> = ({ setShowDrawer }) => {
   return (
     <Button
       isUnstyled
-      className="relative h-[80px] w-[80px]"
+      className="relative h-[75px] w-[210px]"
       onClick={handleClick}
     >
       <Image
-        src="/logo-mobile.png"
+        src={Logo}
         fill
         alt="Pacific Fire Engineering"
         objectFit="contain"
@@ -52,15 +53,13 @@ const NavItem: React.FC<NavItemProps> = ({ item, setShowDrawer }) => {
     router.push(link);
   };
   return (
-    <Link href={link}>
-      <Button
-        isUnstyled
-        className={clsx(isActive && 'underline')}
-        onClick={handleClick}
-      >
-        {label}
-      </Button>
-    </Link>
+    <Button
+      isUnstyled
+      className={clsx(isActive && 'underline')}
+      onClick={handleClick}
+    >
+      <span>{label}</span>
+    </Button>
   );
 };
 
