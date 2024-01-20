@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import clsx from 'clsx';
-import { buttonClassNames } from '@/components/common/Button';
 import { navItems, NavItemType } from '@/utils/const';
 import Logo from '@/public/logo.png';
 
@@ -24,13 +23,13 @@ const NavItem: React.FC<NavItemProps> = ({ item }) => {
 };
 
 const NavDesktop: React.FC = () => (
-  <div className="flex items-center justify-between px-4 py-2 text-white">
+  <div className="flex items-center justify-between">
     <div className="relative h-[100px] w-[200px]">
       <Image
+        className="h-auto w-auto object-contain"
         src={Logo}
         fill
         alt="Pacific Fire Engineering"
-        objectFit="contain"
         priority
       />
     </div>
@@ -39,11 +38,6 @@ const NavDesktop: React.FC = () => (
       {navItems.map((item) => (
         <NavItem item={item} key={item.label} />
       ))}
-    </div>
-    <div>
-      <Link className={clsx(buttonClassNames)} href="/contact">
-        <span>Contact Us</span>
-      </Link>
     </div>
   </div>
 );

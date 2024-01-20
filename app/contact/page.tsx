@@ -1,9 +1,10 @@
 import React from 'react';
+import { Heading } from '@/components/';
 
 export default function Page() {
   return (
-    <main className="">
-      <h1>Contact</h1>
+    <main>
+      <Heading title="Contact Us" />
     </main>
   );
 }

@@ -25,14 +25,14 @@ const NavImage: React.FC<NavImageProps> = ({ setShowDrawer }) => {
   return (
     <Button
       isUnstyled
-      className="relative h-[75px] w-[210px]"
+      className="relative h-[60px] w-full max-w-[170px]"
       onClick={handleClick}
     >
       <Image
         src={Logo}
         fill
+        className="h-auto w-auto object-contain"
         alt="Pacific Fire Engineering"
-        objectFit="contain"
         priority
       />
     </Button>
@@ -55,7 +55,7 @@ const NavItem: React.FC<NavItemProps> = ({ item, setShowDrawer }) => {
   return (
     <Button
       isUnstyled
-      className={clsx(isActive && 'underline')}
+      className={clsx('text-lg', isActive && 'underline')}
       onClick={handleClick}
     >
       <span>{label}</span>
@@ -70,14 +70,14 @@ const NavMobile: React.FC = () => {
   return (
     <div>
       {/* Untoggled Bar */}
-      <div className="flex items-center justify-between px-4 py-2">
+      <div className="flex items-center justify-between py-2">
         <Button isUnstyled onClick={() => setShowDrawer(true)}>
           <MdMenu size={35} />
         </Button>
         <NavImage setShowDrawer={setShowDrawer} />
         <Link
           href="/contact"
-          className="'rounded-md text-white' bg-primary p-4 text-sm uppercase text-white"
+          className="text-nowrap rounded-md bg-primary px-2 py-3 text-sm uppercase text-white"
         >
           <span>Contact Us</span>
         </Link>
@@ -90,20 +90,21 @@ const NavMobile: React.FC = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
-            className="absolute left-0 top-0 z-10 h-full w-full bg-white"
+            transition={{ duration: 0.25, ease: 'easeIn' }}
+            className="fixed inset-0 z-10 h-full w-full bg-white"
           >
-            <div className="absolute right-0">
+            <div className="absolute right-0 p-3">
               <Button
                 onClick={() => setShowDrawer(false)}
                 isUnstyled
                 className="ml-auto"
               >
-                <MdClose size={35} />
+                <MdClose size={38} />
               </Button>
             </div>
             <div className="flex h-full max-h-screen items-center justify-center">
               <div
-                className="flex flex-col items-center justify-center gap-3"
+                className="flex flex-col items-center justify-center gap-4"
                 ref={navListRef}
               >
                 {navItems.map((item) => (

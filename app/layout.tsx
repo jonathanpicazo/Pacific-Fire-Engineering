@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Open_Sans, Montserrat } from 'next/font/google';
 import { Header, Footer } from '@/components';
+import { layoutContainerClassNames } from '@/utils/tw';
 import './globals.css';
 
 const openSans = Open_Sans({
@@ -32,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={clsx(openSans.variable, montserrat.variable)}>
         <Header />
-        <div className="mx-auto max-w-screen-xl px-4 md:px-8">{children}</div>
+        <div className={clsx(layoutContainerClassNames)}>{children}</div>
         <Footer />
       </body>
     </html>

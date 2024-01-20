@@ -5,14 +5,13 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './utils/tw/**/*.{js,ts}',
   ],
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#007BFF',
-          light: '#4d94ff',
-          dark: '#0056b3',
+          DEFAULT: '#830324',
         },
         accent: {
           dark: '#333333',
@@ -24,11 +23,6 @@ const config: Config = {
         // 👇 Add CSS variables
         body: ['var(--font-opensans)'],
         header: ['var(--font-montserrat)'],
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
