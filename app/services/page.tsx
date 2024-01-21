@@ -1,11 +1,13 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import clsx from 'clsx';
 import { Heading, ServiceCard } from '@/components';
 import ServiceImage1 from '@/public/services/fire-sprinkler-systems.jpg';
 import ServiceImage2 from '@/public/services/high-pile-storage.jpg';
 import ServiceImage3 from '@/public/services/chemical-storage.jpg';
 import { ServiceType } from '@/types';
 import { siteName } from '@/utils/const';
+import { layoutContainerClassNames } from '@/utils/tw';
 
 const services: ServiceType[] = [
   {
@@ -35,11 +37,13 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
-      <Heading title="Services Provided" />
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
-        {services.map((service) => (
-          <ServiceCard key={service.title} service={service} />
-        ))}
+      <div className={clsx(layoutContainerClassNames)}>
+        <Heading title="Services Provided" />
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
+          {services.map((service) => (
+            <ServiceCard key={service.title} service={service} />
+          ))}
+        </div>
       </div>
     </main>
   );

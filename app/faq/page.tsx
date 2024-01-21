@@ -1,6 +1,8 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import clsx from 'clsx';
 import { Heading, Question } from '@/components';
+import { layoutContainerClassNames } from '@/utils/tw';
 import { siteName } from '@/utils/const';
 
 export const metadata: Metadata = {
@@ -80,11 +82,13 @@ const qaArray: QAType[] = [
 export default function Page() {
   return (
     <main>
-      <Heading title="Frequently Asked Questions" />
-      <div className="flex flex-col gap-4">
-        {qaArray.map((qa) => (
-          <Question key={qa.id} question={qa.question} answer={qa.answer} />
-        ))}
+      <div className={clsx(layoutContainerClassNames)}>
+        <Heading title="Frequently Asked Questions" />
+        <div className="flex flex-col gap-4">
+          {qaArray.map((qa) => (
+            <Question key={qa.id} question={qa.question} answer={qa.answer} />
+          ))}
+        </div>
       </div>
     </main>
   );

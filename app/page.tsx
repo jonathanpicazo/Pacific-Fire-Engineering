@@ -1,5 +1,8 @@
 import React from 'react';
-import { Heading } from '@/components';
+import clsx from 'clsx';
+import { Heading, Hero } from '@/components';
+import { layoutContainerClassNames } from '@/utils/tw';
+import HeroImage from '@/public/hero.jpg';
 
 const services = [
   'High Pile Storage Compliance and Commodity Classification',
@@ -17,22 +20,25 @@ const services = [
 export default function Home() {
   return (
     <main>
-      <Heading title="Pacific Fire Engineering" className="!mb-2 md:!mb-3" />
-      <h2 className="mb-1 md:mb-3 md:text-lg">
-        A Professional Fire Protection Engineering Firm
-      </h2>
-      <p className="mb-3">
-        At Pacific Fire Engineering, we have registered Fire Protection
-        Engineer&apos;s on staff ready to serve your Fire Protection Design and
-        Life Safety needs. Our firm specializes in:
-      </p>
-      <ul className="list-disc">
-        {services.map((service) => (
-          <li key={service} className="ml-6 md:ml-8">
-            {service}
-          </li>
-        ))}
-      </ul>
+      <Hero image={HeroImage} />
+      <div className={clsx(layoutContainerClassNames)}>
+        <Heading title="Pacific Fire Engineering" className="!mb-2 md:!mb-3" />
+        <h2 className="mb-1 md:mb-3 md:text-lg">
+          A Professional Fire Protection Engineering Firm
+        </h2>
+        <p className="mb-3">
+          At Pacific Fire Engineering, we have registered Fire Protection
+          Engineer&apos;s on staff ready to serve your Fire Protection Design
+          and Life Safety needs. Our firm specializes in:
+        </p>
+        <ul className="list-disc">
+          {services.map((service) => (
+            <li key={service} className="ml-6 md:ml-8">
+              {service}
+            </li>
+          ))}
+        </ul>
+      </div>
     </main>
   );
 }

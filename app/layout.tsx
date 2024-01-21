@@ -2,8 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Open_Sans, Montserrat } from 'next/font/google';
-import { Header, Footer, Hero } from '@/components';
-import { layoutContainerClassNames } from '@/utils/tw';
+import { Header, Footer } from '@/components';
 import './globals.css';
 
 const openSans = Open_Sans({
@@ -33,8 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={clsx(openSans.variable, montserrat.variable)}>
         <Header />
-        <Hero />
-        <div className={clsx(layoutContainerClassNames)}>{children}</div>
+        {children}
         <Footer />
       </body>
     </html>
