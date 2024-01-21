@@ -17,9 +17,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           className="h-auto w-auto rounded-lg object-cover object-top"
           alt={title}
           fill
-          sizes="(max-width: 600px) 100vw,
-                 (max-width: 1200px) 50vw,
-                  1200px"
         />
       </div>
       <p className="mt-2 md:mt-4">{description}</p>

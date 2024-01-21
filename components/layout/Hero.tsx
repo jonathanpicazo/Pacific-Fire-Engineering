@@ -16,9 +16,6 @@ const Hero: React.FC = () => {
           fill
           className="h-auto w-auto object-cover"
           alt="Pacific Fire Engineering"
-          sizes="(max-width: 600px) 100vw,
-                 (max-width: 1200px) 50vw,
-                                   1200px"
         />
       </div>
     )
