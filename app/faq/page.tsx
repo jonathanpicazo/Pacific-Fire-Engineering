@@ -1,6 +1,11 @@
 import React from 'react';
-
+import type { Metadata } from 'next';
 import { Heading, Question } from '@/components';
+import { siteName } from '@/utils/const';
+
+export const metadata: Metadata = {
+  title: `Frequently Asked Questions | ${siteName}`,
+};
 
 type QAType = {
   id: number;

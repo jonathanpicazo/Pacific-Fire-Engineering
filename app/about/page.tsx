@@ -1,9 +1,10 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Heading } from '@/components';
+import { siteName } from '@/utils/const';
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: `About Us | ${siteName}`,
   description:
     "Pacific Fire Engineering Inc. is a fire protection firm dedicated to provide professional, timely, and economical solutions that comply with today's complex Fire and Building Codes while exceeding our client's expectations.",
 };

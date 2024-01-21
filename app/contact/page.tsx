@@ -1,5 +1,11 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { Heading, InfoCard, Button } from '@/components';
+import { siteName } from '@/utils/const';
+
+export const metadata: Metadata = {
+  title: `Contact Us | ${siteName}`,
+};
 
 export default function Page() {
   return (

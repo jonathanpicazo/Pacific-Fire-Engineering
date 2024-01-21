@@ -1,9 +1,11 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { Heading, ServiceCard } from '@/components';
 import ServiceImage1 from '@/public/services/fire-sprinkler-systems.jpg';
 import ServiceImage2 from '@/public/services/high-pile-storage.jpg';
 import ServiceImage3 from '@/public/services/chemical-storage.jpg';
 import { ServiceType } from '@/types';
+import { siteName } from '@/utils/const';
 
 const services: ServiceType[] = [
   {
@@ -25,6 +27,10 @@ const services: ServiceType[] = [
       'We will classify your chemicals, classify their commodity, summarize the individual hazard amounts and verify the amounts against the exempt amounts allowed in the Fire and Building codes. Even if you are over the exempt amounts, we can in many cases avoid the need of Hazardous Occupancies (H-Rooms) with the use of Approved Cabinets, Additional Control Areas or negotiating with the approving authority. All that you need to do is supply us with the inventory of hazardous materials (storage and use), the appropriate MSDS Sheets, and a plan showing the areas of your facility that the chemicals are used and stored.',
   },
 ];
+
+export const metadata: Metadata = {
+  title: `Services Provided | ${siteName}`,
+};
 
 export default function Page() {
   return (

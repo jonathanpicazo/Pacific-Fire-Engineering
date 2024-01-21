@@ -9,3 +9,5 @@ export const navItems: NavItemType[] = [
   { label: "FAQ's", link: '/faq' },
   { label: 'Contact Us', link: '/contact' },
 ];
+
+export const siteName = 'Pacific Fire Enginering';
