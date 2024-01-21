@@ -13,8 +13,10 @@ export default function Page() {
   return (
     <main>
       <Heading title="About Us" />
-      <h2>About Pacific Fire Engineering</h2>
-      <div className="mt-5 flex flex-col gap-4">
+      <h2 className="mb-1 md:mb-3 md:text-lg">
+        About Pacific Fire Engineering
+      </h2>
+      <div className="flex flex-col gap-4">
         <p>
           Pacific Fire Engineering Inc. is a fire protection firm dedicated to
           provide professional, timely, and economical solutions that comply
