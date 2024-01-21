@@ -5,7 +5,7 @@ import { layoutContainerClassNames } from '@/utils/tw';
 
 const Footer: React.FC = () => (
   <footer>
-    <div className="mt-4 bg-primary text-white md:mt-8">
+    <div className="mt-6 bg-primary text-white md:mt-9">
       <div className={clsx(layoutContainerClassNames, 'py-3')}>
         <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-sm">
           <span>&copy; {new Date().getFullYear()}</span>
