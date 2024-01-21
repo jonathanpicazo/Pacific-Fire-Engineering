@@ -11,7 +11,9 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
+          light: '#6b0119',
           DEFAULT: '#830324',
+          dark: '#990033',
         },
         accent: {
           dark: '#333333',
@@ -23,6 +25,9 @@ const config: Config = {
         // 👇 Add CSS variables
         body: ['var(--font-opensans)'],
         header: ['var(--font-montserrat)'],
+      },
+      opacity: {
+        hover: '0.7',
       },
     },
   },

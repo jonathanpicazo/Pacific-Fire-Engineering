@@ -16,7 +16,7 @@ const NavItem: React.FC<NavItemProps> = ({ item }) => {
   const pathname = usePathname();
   const isActive = pathname === link;
   return (
-    <Link href={link}>
+    <Link className="hover:opacity-hover" href={link}>
       <span className={clsx(isActive && 'underline')}>{label}</span>
     </Link>
   );
@@ -25,13 +25,15 @@ const NavItem: React.FC<NavItemProps> = ({ item }) => {
 const NavDesktop: React.FC = () => (
   <div className="flex items-center justify-between">
     <div className="relative h-[100px] w-[200px]">
-      <Image
-        className="h-auto w-auto object-contain"
-        src={Logo}
-        fill
-        alt="Pacific Fire Engineering"
-        priority
-      />
+      <Link className="hover:opacity-hover" href="/">
+        <Image
+          className="h-auto w-auto object-contain"
+          src={Logo}
+          fill
+          alt="Pacific Fire Engineering"
+          priority
+        />
+      </Link>
     </div>
 
     <div className="flex items-center justify-center gap-8">

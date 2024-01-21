@@ -22,33 +22,33 @@ const Question: React.FC<QuestionProps> = ({ question, answer }) => {
     <Button
       isUnstyled
       onClick={() => setShowAnswer(!showAnswer)}
-      className="flex justify-between border-b-2 border-primary pb-2 [&>]:flex-1"
+      className="border-b-2 border-primary pb-3 text-left"
     >
-      <div className="text-left">
-        <p className="text-sm font-bold md:text-base">{question}</p>
-        <AnimatePresence>
-          {showAnswer && (
-            <motion.div
-              key="answer-container"
-              className="ml-2 mt-4 text-sm md:ml-4 md:text-sm"
-              variants={variants}
-              initial="collapsed"
-              animate={showAnswer ? 'expanded' : 'collapsed'}
-              exit="collapsed"
-              transition={{ duration: 0.15, ease: 'easeIn' }}
-            >
-              <p>{answer}</p>
-            </motion.div>
+      <div className="md:hover:opacity-hover flex w-full">
+        <p className="w-full text-sm font-bold md:text-base">{question}</p>
+        <div className="ml-1 md:ml-3">
+          {showAnswer ? (
+            <MdKeyboardArrowUp size={30} />
+          ) : (
+            <MdKeyboardArrowDown size={30} />
           )}
-        </AnimatePresence>
+        </div>
       </div>
-      <div className="ml-1 md:ml-3">
-        {showAnswer ? (
-          <MdKeyboardArrowUp size={30} />
-        ) : (
-          <MdKeyboardArrowDown size={30} />
+      <AnimatePresence>
+        {showAnswer && (
+          <motion.div
+            key="answer-container"
+            className="ml-2 mt-4 text-sm md:ml-4 md:text-sm"
+            variants={variants}
+            initial="collapsed"
+            animate={showAnswer ? 'expanded' : 'collapsed'}
+            exit="collapsed"
+            transition={{ duration: 0.15, ease: 'easeIn' }}
+          >
+            <p>{answer}</p>
+          </motion.div>
         )}
-      </div>
+      </AnimatePresence>
     </Button>
   );
 };
