@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-image-export-optimizer",
     "start": "next start",
     "lint": "next lint",
     "netlify-dev": "netlify dev"
@@ -16,6 +16,7 @@
     "eslint-plugin-tailwindcss": "^3.13.1",
     "framer-motion": "^10.18.0",
     "next": "14.0.4",
+    "next-image-export-optimizer": "^1.12.2",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",

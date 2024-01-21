@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -28,7 +28,7 @@ const NavImage: React.FC<NavImageProps> = ({ setShowDrawer }) => {
       className="relative h-[60px] w-full max-w-[170px]"
       onClick={handleClick}
     >
-      <Image
+      <ExportedImage
         src={Logo}
         fill
         className="h-auto w-auto object-contain"

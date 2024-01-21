@@ -3,7 +3,7 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import clsx from 'clsx';
 import { navItems, NavItemType } from '@/utils/const';
 import Logo from '@/public/logo.png';
@@ -26,7 +26,7 @@ const NavDesktop: React.FC = () => (
   <div className="flex items-center justify-between">
     <div className="relative h-[100px] w-[200px]">
       <Link className="hover:opacity-hover" href="/">
-        <Image
+        <ExportedImage
           className="h-auto w-auto object-contain"
           src={Logo}
           fill
