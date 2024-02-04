@@ -9,8 +9,7 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      sans: ['var(--font-opensans)'],
-      serif: ['var(--font-montserrat)'],
+      'sans-serif': ['var(--font-opensans)', 'var(--font-montserrat)'],
     },
     extend: {
       colors: {
