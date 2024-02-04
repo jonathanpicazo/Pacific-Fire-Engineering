@@ -30,7 +30,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(openSans.variable, montserrat.variable)}>
+      <body
+        className={clsx(
+          openSans.variable,
+          montserrat.variable,
+          'font-sans',
+          'font-serif'
+        )}
+      >
         <Header />
         {children}
         <Footer />
