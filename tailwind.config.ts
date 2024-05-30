@@ -8,6 +8,9 @@ const config: Config = {
     './utils/tw/**/*.{js,ts}',
   ],
   theme: {
+    fontFamily: {
+      'sans-serif': ['var(--font-opensans)', 'var(--font-montserrat)'],
+    },
     extend: {
       colors: {
         primary: {
