@@ -10,7 +10,7 @@ const infoHolder = {
   name: 'Mr. Steven P. Biship, P.E.',
   address: '4214 Floyd Drive Corona, California 92883',
   tel: '7149844346',
-  email: 'sbiship@pacificfireeng.com',
+  email: 'pacificfire@me.com',
   linkedIn: '',
 };
 
@@ -25,11 +25,15 @@ const InfoCard: React.FC = () => {
         </div>
         <div className="flex items-center gap-1">
           <PhoneIcon />
-          <span>{formatPhone(tel)}</span>
+          <a href={`tel:${tel}`}>
+            <span>{formatPhone(tel)}</span>
+          </a>
         </div>
         <div className="flex items-center gap-1">
           <EmailIcon />
-          <span>{email}</span>
+          <a href={`mailto:${email}`}>
+            <span>{email}</span>
+          </a>
         </div>
       </div>
     </div>
