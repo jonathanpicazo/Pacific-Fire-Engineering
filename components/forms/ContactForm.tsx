@@ -74,14 +74,14 @@ const ContactForm: React.FC = () => {
         <div>
           <label
             htmlFor="name"
-            className="mb-2 block text-sm font-medium text-primary"
+            className="mb-2 block text-base font-medium text-primary"
           >
             <span>Name</span>
             <input
               {...register('name')}
               type="text"
               className={clsx(
-                'block w-full rounded-lg border p-2.5 text-sm text-gray-900 focus:border-primary focus:ring-primary',
+                'block w-full rounded-lg border p-2.5 text-base text-gray-900 focus:border-primary focus:ring-primary',
                 {
                   'border-red-500': errors.name,
                   'border-gray-300 bg-gray-50': !errors.name,
@@ -97,14 +97,14 @@ const ContactForm: React.FC = () => {
         <div>
           <label
             htmlFor="company"
-            className="mb-2 block text-sm font-medium text-primary"
+            className="mb-2 block text-base font-medium text-primary"
           >
             <span>Company</span>
             <input
               {...register('company')}
               type="text"
               className={clsx(
-                'block w-full rounded-lg border p-2.5 text-sm text-gray-900 focus:border-primary focus:ring-primary',
+                'block w-full rounded-lg border p-2.5 text-base text-gray-900 focus:border-primary focus:ring-primary',
                 {
                   'border-red-500': errors.company,
                   'border-gray-300 bg-gray-50': !errors.company,
@@ -124,14 +124,14 @@ const ContactForm: React.FC = () => {
         <div>
           <label
             htmlFor="email"
-            className="mb-2 block text-sm font-medium text-primary"
+            className="mb-2 block text-base font-medium text-primary"
           >
             <span>Email address</span>
             <input
               {...register('email')}
               type="email"
               className={clsx(
-                'block w-full rounded-lg border p-2.5 text-sm text-gray-900 focus:border-primary focus:ring-primary',
+                'block w-full rounded-lg border p-2.5 text-base text-gray-900 focus:border-primary focus:ring-primary',
                 {
                   'border-red-500': errors.email,
                   'border-gray-300 bg-gray-50': !errors.email,
@@ -149,14 +149,14 @@ const ContactForm: React.FC = () => {
         <div>
           <label
             htmlFor="phone"
-            className="mb-2 block text-sm font-medium text-primary"
+            className="mb-2 block text-base font-medium text-primary"
           >
             <span>Phone number</span>
             <input
               {...register('phone')}
               type="tel"
               className={clsx(
-                'block w-full rounded-lg border p-2.5 text-sm text-gray-900 focus:border-primary focus:ring-primary',
+                'block w-full rounded-lg border p-2.5 text-base text-gray-900 focus:border-primary focus:ring-primary',
                 {
                   'border-red-500': errors.phone,
                   'border-gray-300 bg-gray-50': !errors.phone,
@@ -177,13 +177,13 @@ const ContactForm: React.FC = () => {
       </div>
       <div>
         <label htmlFor="inquiry">
-          <span className="mb-2 block text-sm font-medium text-primary">
+          <span className="mb-2 block text-base font-medium text-primary">
             Inquiry
           </span>
           <textarea
             {...register('inquiry')}
             className={clsx(
-              'w-full rounded-lg border px-2 py-1.5 text-sm focus:border-primary focus:ring-primary',
+              'w-full rounded-lg border px-2 py-1.5 text-base focus:border-primary focus:ring-primary',
               {
                 'border-red-500': errors.inquiry,
                 'border-gray-300 bg-gray-50': !errors.inquiry,
