@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2aa375f5-db11-47be-9da2-2d9e321ffe1b/deploy-status)](https://app.netlify.com/sites/pacific-fire-engineering/deploys)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
