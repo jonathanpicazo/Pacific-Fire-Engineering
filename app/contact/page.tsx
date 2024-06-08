@@ -6,6 +6,8 @@ import { layoutContainerClassNames } from '@/utils/tw';
 
 export const metadata = {
   title: `Contact Us | ${siteName}`,
+  description:
+    'Contact us for inquiries about our fire protection services, quotes, or any questions you may have.',
 };
 
 export default function Page() {
