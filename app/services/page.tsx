@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import clsx from 'clsx';
-import { Heading, ServiceCard } from '@/components';
+import { Heading, ServiceCard, ServicesJsonLd } from '@/components';
 import ServiceImage1 from '@/public/services/fire-sprinkler-systems.jpg';
 import ServiceImage2 from '@/public/services/high-pile-storage.jpg';
 import ServiceImage3 from '@/public/services/chemical-storage.jpg';
@@ -32,11 +32,14 @@ const services: ServiceType[] = [
 
 export const metadata: Metadata = {
   title: `Services Provided | ${siteName}`,
+  description:
+    'Explore our fire protection services, including Fire Sprinkler Systems, High Pile Storage, and Chemical Classification.',
 };
 
 export default function Page() {
   return (
     <main>
+      <ServicesJsonLd />
       <div className={clsx(layoutContainerClassNames)}>
         <Heading title="Services Provided" />
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
