@@ -20,6 +20,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pacfireeng.com'),
   title: 'Pacific Fire Engineering',
   description:
     'High Pile Storage, Fire Code Consulting, Chemical Classification, Fire Code Review, Fire Sprinkler Design',
