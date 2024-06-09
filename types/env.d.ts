@@ -5,5 +5,7 @@ namespace NodeJS {
     SENDGRID_FROM_EMAIL: string;
     SENDGRID_FROM_NAME: string;
     SENDGRID_TO_EMAIL: string;
+    CONTENTFUL_SPACE_ID: string;
+    CONTENTFUL_ACCESS_TOKEN: string;
   }
 }
