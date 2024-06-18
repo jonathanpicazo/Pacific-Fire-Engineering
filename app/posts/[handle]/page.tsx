@@ -16,7 +16,7 @@ const PAGINATION_LIMIT = 10;
 
 const getPosts = async (): Promise<BlogPost[]> => {
   try {
-    const url = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=blogPost&include=${PAGINATION_LIMIT}`;
+    const url = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=blogPost&include=${PAGINATION_LIMIT}&sys.publishedAt[exists]=true`;
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Failed to fetch posts, status: ${response.status}`);
