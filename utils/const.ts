@@ -6,6 +6,7 @@ export const navItems: NavItemType[] = [
   { label: 'Home', link: '/' },
   { label: 'About', link: '/about' },
   { label: 'Services', link: '/services' },
+  // { label: 'Blog', link: '/posts' },
   { label: "FAQ's", link: '/faq' },
   { label: 'Contact Us', link: '/contact' },
 ];

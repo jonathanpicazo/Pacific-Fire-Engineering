@@ -73,7 +73,7 @@ export default function RootLayout({
       >
         <MainJsonLd />
         <Header />
-        {children}
+        <div>{children}</div>
         <Footer />
       </body>
     </html>

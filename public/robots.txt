@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://pacfireeng.com/
+
+# Sitemaps
+Sitemap: https://pacfireeng.com/sitemap.xml

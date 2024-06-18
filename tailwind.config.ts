@@ -14,6 +14,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
+          lightest: '#FAD4D8',
           light: '#6b0119',
           DEFAULT: '#830324',
           dark: '#990033',
@@ -34,6 +35,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  // eslint-disable-next-line import/no-extraneous-dependencies, global-require
+  plugins: [require('@tailwindcss/typography')],
 };
 export default config;
