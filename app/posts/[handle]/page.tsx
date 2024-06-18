@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import { notFound } from 'next/navigation';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
 import { Heading, ImageContentful } from '@/components';
 import { layoutContainerClassNames } from '@/utils/tw';
 import { BlogPost } from '@/types/contentful';
