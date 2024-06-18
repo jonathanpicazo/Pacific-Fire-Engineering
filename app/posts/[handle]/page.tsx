@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import { notFound } from 'next/navigation';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
 import { Heading, ImageContentful } from '@/components';
 import { layoutContainerClassNames } from '@/utils/tw';
 import { BlogPost } from '@/types/contentful';
@@ -16,7 +15,7 @@ const PAGINATION_LIMIT = 10;
 
 const getPosts = async (): Promise<BlogPost[]> => {
   try {
-    const url = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=blogPost&include=${PAGINATION_LIMIT}&sys.publishedAt[exists]=true`;
+    const url = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=blogPost&include=${PAGINATION_LIMIT}`;
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Failed to fetch posts, status: ${response.status}`);
