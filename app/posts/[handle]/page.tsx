@@ -140,7 +140,7 @@ export default async function Page({ params }: Props) {
                 post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-primary-lightest mr-2 rounded px-2.5 py-0.5 text-xs font-semibold text-primary-dark"
+                    className="mr-2 rounded bg-primary-lightest px-2.5 py-0.5 text-xs font-semibold text-primary-dark"
                   >
                     {tag}
                   </span>
